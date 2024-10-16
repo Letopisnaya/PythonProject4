@@ -21,7 +21,6 @@ class Category:
     def products(self):
         return self.__products
 
-
     def add_products(self, products_new: Product):
         self.__products.append(products_new)
 
