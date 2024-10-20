@@ -59,8 +59,11 @@ def test_category_property(category_1):
         {"name": "Xiaomi Redmi Note 11", "description": "1024GB, Синий", "price": 31000.0, "quantity": 14},
     ]
 
-
-def test_category_setter(category_1, products_new):
+def test_category_app(category_1, products_new):
     assert category_1.count_products == 3
     category_1.products = products_new
     assert category_1.count_products == 4
+
+
+def test_total_products(category_01):
+    assert str(category_01) == "Смартфоны, количество продуктов: 27 шт."
