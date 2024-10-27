@@ -68,3 +68,7 @@ def test_category_app(category_1, products_new):
 
 def test_total_products(category_01):
     assert str(category_01) == "Смартфоны, количество продуктов: 27 шт."
+
+def test_category_app_error(category_1, products_new):
+    with pytest.raises(TypeError):
+        category_1.products = 1
